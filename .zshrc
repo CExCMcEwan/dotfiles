@@ -9,8 +9,6 @@ plugins=(
 git
 zsh-autosuggestions
 zsh-syntax-highlighting
-textmate
-Exa
 )
 
 # Path to your oh-my-zsh installation.
@@ -37,6 +35,44 @@ alias goto_ws="cd /workspaces"
 alias goto_v5="goto_ws ; cd isight_main_v5_beta"
 alias goto_sample="goto_ws ; cd config_sample_v5"
 alias goto_base="goto_ws ; cd config_base_v5"
+alias isight='node server.js'
+alias set_base='export APP_CONFIG_PATH=/workspaces/config_base_v5 ; echo $APP_CONFIG_PATH'
+alias set_sample='export APP_CONFIG_PATH=/workspaces/config_sample_v5 ; echo $APP_CONFIG_PATH'
+
+#I-Sight Env Variables
+export NODE_ENV=develop
+export APP_CONFIG_PATH=/workspaces/config_sample_v5
+export APP_PLATFORM_PATH=/workspaces/isight_main_v5_beta
+export DISABLE_CONFIG_BACKUP=true
+export SSE_DISABLED=true
+export YF_URL_SVC=http://127.0.0.1:8080
+export CSRF=false
+export MAX_DISK_USAGE_PERCENTAGE=96
+export DEFAULT_USER_PASSWORD=123456
+export MIN_JS=false
+export FIELDS_MEMORY_CACHE_TTL_MS=10000
+export DISABLE_ES_SNAPSHOT=true
+export DISABLE_FIELD_MEMORY_CACHE_TTL=true
+export POSTGRESQL=true
+export INDEX_FILE_ATTACHMENTS=true
+export FIELDS_MEMORY_CACHE_TTL_MS=300000
+export PROXY=false
+SLEEP_TIME=0
+#PDFTron
+export ENABLE_PDFTRON=true
+export PDFTRON_LICENSE_KEY=$CODESPACE_PDFTRON_LICENSE_KEY
+# Mail
+export MAIL_IGNORE_TLS=true
+export MAILSRV_DOMAIN=localhost.local
+export MAIL_DISABLE_STARTTLS=true
+export MAIL_DISABLE_DNS_VALID=true
+export MAIL_TRANSPORT=direct
+export MAIL_OVERRIDE_RECIP=cmcewan@i-sight.com
+#Geo Mapping
+export ENABLE_GEO_MAPPING=true
+export GEO_MAPPING_PROXY_MODE=true
+export GEO_MAPPING_FRONTEND_KEY=$CODESPACE_GEOMAPPING_FRONTEND_KEY
+export GEO_MAPPING_SECRET_KEY=$CODESPACE_GEOMAPPING_KEY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
