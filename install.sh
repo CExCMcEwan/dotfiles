@@ -25,9 +25,9 @@ zshrc() {
 
 echo "Installing fonts."
 FONT_DIR="$HOME/.fonts"
-git clone https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode
+git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git $FONT_DIR
 cd $FONT_DIR
-./install.sh
+./install.sh FiraCode
 
 zshrc
 
