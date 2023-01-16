@@ -1,6 +1,7 @@
 tap "homebrew/cask"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 
-cask "iterm2"
+cask "font-fira-code"
 cask "textmate"
 brew "exa"
