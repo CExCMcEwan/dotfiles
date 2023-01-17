@@ -26,8 +26,6 @@ fi
 # Use powerlevel10k theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-source $ZSH/oh-my-zsh.sh
-
 # I-sight Aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -38,9 +36,10 @@ alias goto_base="goto_ws ; cd config_base_v5"
 alias isight='node server.js'
 alias set_base='export APP_CONFIG_PATH=/workspaces/config_base_v5 ; echo $APP_CONFIG_PATH'
 alias set_sample='export APP_CONFIG_PATH=/workspaces/config_sample_v5 ; echo $APP_CONFIG_PATH'
+alias resetup='make breakdown ; make setup ; make-create-sample-users'
 
 #I-Sight Env Variables
-export NODE_ENV=develop
+export NODE_ENV=development
 export APP_CONFIG_PATH=/workspaces/config_sample_v5
 export APP_PLATFORM_PATH=/workspaces/isight_main_v5_beta
 export DISABLE_CONFIG_BACKUP=true
@@ -57,7 +56,7 @@ export POSTGRESQL=true
 export INDEX_FILE_ATTACHMENTS=true
 export FIELDS_MEMORY_CACHE_TTL_MS=300000
 export PROXY=false
-SLEEP_TIME=0
+export SLEEP_TIME=0
 #PDFTron
 export ENABLE_PDFTRON=true
 export PDFTRON_LICENSE_KEY=$CODESPACE_PDFTRON_LICENSE_KEY
@@ -80,3 +79,5 @@ export GEO_MAPPING_SECRET_KEY=$CODESPACE_GEOMAPPING_KEY
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source $ZSH/oh-my-zsh.sh
