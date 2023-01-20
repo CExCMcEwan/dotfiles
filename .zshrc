@@ -36,7 +36,8 @@ alias goto_base="goto_ws ; cd config_base_v5"
 alias isight='node server.js'
 alias set_base='export APP_CONFIG_PATH=/workspaces/config_base_v5 ; echo $APP_CONFIG_PATH'
 alias set_sample='export APP_CONFIG_PATH=/workspaces/config_sample_v5 ; echo $APP_CONFIG_PATH'
-alias resetup='make breakdown ; make setup ; make-create-sample-users'
+alias resetup='make breakdown ; make setup ; make create-sample-users'
+alias mail_up='docker run -d -p 1080:1080 -p 1025:1025 soulteary/maildev'
 
 #I-Sight Env Variables
 export NODE_ENV=development
