@@ -14,9 +14,6 @@ zsh-syntax-highlighting
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Text Editor (TextMate)
-export EDITOR="/usr/local/bin/mate -w"
-
 # Exa to display file names
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa"
@@ -36,6 +33,8 @@ alias goto_base="goto_ws ; cd config_base_v5"
 alias isight='node server.js'
 alias set_base='export APP_CONFIG_PATH=/workspaces/config_base_v5 ; echo $APP_CONFIG_PATH'
 alias set_sample='export APP_CONFIG_PATH=/workspaces/config_sample_v5 ; echo $APP_CONFIG_PATH'
+alias set_test='export APP_CONFIG_PATH=/workspaces/isight_main_v5_beta/test/fixture ; echo $APP_CONFIG_PATH'
+alias setup_test='ENV=test make test-breakdown ; ENV=test make test-setup'
 alias resetup='make breakdown ; make setup ; make create-sample-users'
 alias mail_up='docker run -d -p 1080:1080 -p 1025:1025 soulteary/maildev'
 
