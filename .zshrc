@@ -30,6 +30,7 @@ alias goto_ws="cd /workspaces"
 alias goto_v5="goto_ws ; cd isight_main_v5_beta"
 alias goto_sample="goto_ws ; cd config_sample_v5"
 alias goto_base="goto_ws ; cd config_base_v5"
+alias goto_test="goto_ws ; goto_v5 ; cd test/fixture"
 alias isight='node server.js'
 alias set_base='export APP_CONFIG_PATH=/workspaces/config_base_v5 ; echo $APP_CONFIG_PATH'
 alias set_sample='export APP_CONFIG_PATH=/workspaces/config_sample_v5 ; echo $APP_CONFIG_PATH'
