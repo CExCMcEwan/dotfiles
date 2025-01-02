@@ -30,6 +30,7 @@ alias goto_ws="cd /workspaces"
 alias goto_v5="goto_ws ; cd isight_main_v5_beta"
 alias goto_sample="goto_ws ; cd config_sample_v5"
 alias goto_base="goto_ws ; cd config_base_v5"
+alias goto_yf="goto_ws ; cd yellowfin"
 alias goto_test="goto_ws ; goto_v5 ; cd test/fixture"
 alias isight='node server.js'
 alias set_base='export APP_CONFIG_PATH=/workspaces/config_base_v5 ; echo $APP_CONFIG_PATH'
@@ -39,13 +40,20 @@ alias setup_test='ENV=test make test-breakdown ; ENV=test make test-setup'
 alias resetup='make breakdown ; make setup ; make create-sample-users'
 alias mail_up='docker run -d -p 1080:1080 -p 1025:1025 soulteary/maildev'
 
-#I-Sight Env Variables
+#Case IQ Env Variables
 export NODE_ENV=development
 export APP_CONFIG_PATH=/workspaces/config_sample_v5
 export APP_PLATFORM_PATH=/workspaces/isight_main_v5_beta
 export DISABLE_CONFIG_BACKUP=true
 export SSE_DISABLED=true
-export YF_URL_SVC=http://127.0.0.1:8080
+#Yellowfin
+export YF_ENABLED=true
+export YF_URL=http://127.0.0.1:9091
+export YF_URL_SVC=http://127.0.0.1:9091
+export YF_DATASOURCE_HOST=postgres
+export YF_DATASOURCE_PASS=isight
+export DB_USER=postgres
+export YF_DB_USER=postgres
 export CSRF=false
 export MAX_DISK_USAGE_PERCENTAGE=96
 export DEFAULT_USER_PASSWORD=123456
